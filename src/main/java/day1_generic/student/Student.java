@@ -1,7 +1,6 @@
 package day1_generic.student;
 
-public class Student {
-
+public abstract class Student {// abstract means we can instantiate// we can't make object from abstract class
     private String name;
 
     public Student(String name) {

@@ -11,7 +11,7 @@ public class MethodReferenceExamples {
     public static void main(String[] args) {
 
 
-//        Consumer<Integer> timesTwo= new Consumer<Integer>() {// anonymous class
+//        Consumer<Integer> timesTwo= new Consumer<Integer>() { // anonymous class is  creating object from interface
 //            @Override
 //            public void accept(Integer integer) {
 //

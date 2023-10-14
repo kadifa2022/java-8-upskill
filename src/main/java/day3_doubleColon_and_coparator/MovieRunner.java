@@ -1,6 +1,7 @@
-package day3_doubleColon_and_coparator.Movie;
+package day3_doubleColon_and_coparator;
 
 import java.util.*;
+import java.util.Comparator;
 
 public class MovieRunner {
 
@@ -22,7 +23,7 @@ public class MovieRunner {
 
         System.out.println("===========sort by year in ascending order==================");
         //movies.sort(Comparator.comparing(movie -> movie.getYear()));
-        movies.sort(Comparator.comparing(Movie::getYear));
+        movies.sort(Comparator.comparing(Movie::getYear)); // we access the instance through class Object
         movies.forEach(System.out::println);
 
         // the Comparator.comparing accepts a Function (functional interface that has 1 parameter and return type)
@@ -42,7 +43,7 @@ public class MovieRunner {
         movies.sort(Comparator.comparing(Movie::getName));
         movies.forEach(System.out::println);
 
-        Collections.sort(movies); // this works because the Comparable is implemented in the class
+        Collections.sort(movies); // this works because the Comparable Interface is implemented in the class
 
 
     }

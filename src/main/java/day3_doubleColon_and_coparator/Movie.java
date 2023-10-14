@@ -1,4 +1,4 @@
-package day3_doubleColon_and_coparator.Movie;
+package day3_doubleColon_and_coparator;
 
 public class Movie implements Comparable<Movie>{
     private String name;
@@ -45,7 +45,7 @@ public class Movie implements Comparable<Movie>{
     }
 
     @Override
-    public int compareTo(Movie o) {
+    public int compareTo(Movie o) {// is implemented method from comparable interface
         return Integer.compare(this.year, o.year);
     }
 

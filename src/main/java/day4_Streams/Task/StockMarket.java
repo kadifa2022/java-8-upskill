@@ -1,9 +1,7 @@
 package day4_Streams.Task;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class StockMarket {
     public static void main(String[] args) {
@@ -109,6 +107,21 @@ public class StockMarket {
                 .filter(p->p.getTrader().getName().equals("Mark"))
                 .map(Transaction::getValue)
                 .forEach(System.out::println);
+
+        System.out.println("=========\n New Topics-  collector  and methods from collector================");
+        System.out.println("============toMap======================");
+
+        Map<String, String> traderMap = Arrays.stream(traders)
+                .collect(Collectors.toMap(Trader::getName, Trader::getCity)); // name is key, city is value
+
+        System.out.println(traderMap);
+
+        System.out.println("============groupingBy - trader's transactions======================");
+        Map<Trader, List<Transaction>> tradersGroupMap =  transactions.stream()     //function has one return type one parameter
+                .collect(Collectors.groupingBy(Transaction::getTrader)); //transaction->transaction.getTrader()
+        tradersGroupMap.forEach((k,v)-> {
+            System.out.println(k.getName() + " " + v);
+        });
 
 
 

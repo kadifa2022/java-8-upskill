@@ -123,6 +123,65 @@ public class StockMarket {
             System.out.println(k.getName() + " " + v);
         });
 
+        System.out.println("==========groupingBy  always returns Map - Company========");
+
+       Map<String, List<Transaction>> companyMap = transactions.stream()
+                //collect () is terminal operations, Collectors.toSet()/Collectors.toList()/Collectors.toMap
+               //Collectors.groupingBy()accepts a function
+                .collect(Collectors.groupingBy(Transaction::getCompany));
+       companyMap.forEach((k,v)-> {System.out.println(k + " " + v);
+       });
+       companyMap.get("Apple").forEach(System.out::println);
+
+
+        System.out.println("==========groupingBy  always returns Map - Year========");
+
+        Map<Integer, List<Transaction>> yearMap = transactions.stream()
+                //collect () is terminal operations, Collectors.toSet()/Collectors.toList()/Collectors.toMap
+                //Collectors.groupingBy()accepts a function
+                                                //parameter::function (function is changing)
+                .collect(Collectors.groupingBy(Transaction::getYear));
+        yearMap.forEach((k,v)-> {System.out.println(k + " " + v);
+        });
+
+        // most normal flow
+        List<Integer> nums = new ArrayList<>(Arrays.asList(4,2,4,3,7,9,2,3,4,5,9,13));
+
+        nums.stream()
+                .filter(p->p % 2 ==0).collect(Collectors.toList());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

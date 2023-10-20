@@ -1,6 +1,6 @@
 Java 8 Upskill
 
-10/18/23
+10/18/23--
 
 Day 5: Stream
 
@@ -73,7 +73,7 @@ Testing examples
          Assert.assertEquals(beforeSort, afterSort)
 
             items.stream()
-            .map(element -> element.getAttriubte("price"))
+            .map(element -> element.getAttribute("price"))
             .map(Double::parseDouble())
             .sorted()
 

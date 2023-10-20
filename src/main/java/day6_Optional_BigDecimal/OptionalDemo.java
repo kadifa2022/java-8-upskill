@@ -3,6 +3,7 @@ package day6_Optional_BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalDouble;
 
 public class OptionalDemo {
 
@@ -59,12 +60,80 @@ public class OptionalDemo {
        moreThan300again.ifPresent(System.out::println);//  consumer does not return anything
 
 
-        System.out.println(" ====orElse()= ===========");
+        System.out.println(" ===mapToDouble has min()= ===========");
 
         Optional<Integer> moreThan3 = nums.stream()
                 .filter(p->p>300)
                 .findAny();
         System.out.println(moreThan3.orElse(-1));
 
+        List<Double> temperatures = List.of(60.5,72.1,65.2,67.8,68.3);
+
+       OptionalDouble tempsMin = temperatures.stream()
+                .mapToDouble(n -> n)
+                .min();
+        System.out.println(tempsMin);// this is optional object
+        System.out.println(tempsMin.getAsDouble() );// this is a double type
+        System.out.println(" ===mapToDouble has max()= ===========");
+
+        OptionalDouble tempsMax = temperatures.stream()
+                .mapToDouble(n -> n)
+                .max();
+        System.out.println(tempsMax);// this is optional object
+        System.out.println(tempsMax.getAsDouble() );// this is a double type
+
+        System.out.println(" ===mapToDouble has average()= ===========");
+
+        OptionalDouble tempsAvg = temperatures.stream()
+                .mapToDouble(n -> n)
+                .max();
+        System.out.println(tempsAvg);// this is optional object
+        System.out.println(tempsAvg.getAsDouble() );// this is a double type
+
+        System.out.println("=======reduce()  min(), max(), sum()=====================");
+        Optional<Double> minReduced = temperatures.stream().reduce( Double::min);
+        System.out.println(minReduced);
+
+        Optional<Double> maxReduced = temperatures.stream().reduce( Double::max);
+        System.out.println(maxReduced);
+
+        Optional<Double> sumReduced = temperatures.stream().reduce( Double::sum);
+        System.out.println(sumReduced);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
+
 }

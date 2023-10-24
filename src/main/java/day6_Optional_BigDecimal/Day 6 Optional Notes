@@ -44,6 +44,7 @@ Optional
 BigDecimal
 	java.math.BigDecimal
     * added much before java 8
+    to round up number( primitive types we have to handle for exp: banks, pharmacies)
 
 	arithmetic operations with primitive datatypes do not have precision, meaning the calculations can not be relied on for specific values
 
@@ -72,8 +73,8 @@ Java 9:
         create an ArrayList:
         List<Integer> l2 = new ArrayList<>(List.of(3, 4, 6, 1, 24, 5)); // now this is an ArrayList, not an ImmutableCollection
 
-    Compact String
-        you may remember the String class using char[] internally, but after this version they are a byte[]
+    Compact String ->
+        you may remember the String class using char[] internally, but after this version java9 they are a byte[]
         short explanation: new encoder that improve memory and performance
 
     JLink

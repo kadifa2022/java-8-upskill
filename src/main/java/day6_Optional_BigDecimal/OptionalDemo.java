@@ -67,13 +67,16 @@ public class OptionalDemo {
                 .findAny();
         System.out.println(moreThan3.orElse(-1));
 
+        System.out.println(" =========min() ===========");
+
         List<Double> temperatures = List.of(60.5,72.1,65.2,67.8,68.3);
 
-       OptionalDouble tempsMin = temperatures.stream()
+       OptionalDouble tempsMin = temperatures.stream() //min return optional type
                 .mapToDouble(n -> n)
                 .min();
         System.out.println(tempsMin);// this is optional object
         System.out.println(tempsMin.getAsDouble() );// this is a double type
+
         System.out.println(" ===mapToDouble has max()= ===========");
 
         OptionalDouble tempsMax = temperatures.stream()

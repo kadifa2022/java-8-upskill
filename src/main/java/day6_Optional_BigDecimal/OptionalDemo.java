@@ -93,14 +93,16 @@ public class OptionalDemo {
         System.out.println(tempsAvg);// this is optional object
         System.out.println(tempsAvg.getAsDouble() );// this is a double type
 
-        System.out.println("=======reduce()  min(), max(), sum()=====================");
+        System.out.println("=======Optional from streams -> reduce()  min(), max(), sum()=====================");
         Optional<Double> minReduced = temperatures.stream().reduce( Double::min);
         System.out.println(minReduced);
 
         Optional<Double> maxReduced = temperatures.stream().reduce( Double::max);
         System.out.println(maxReduced);
 
-        Optional<Double> sumReduced = temperatures.stream().reduce( Double::sum);
+        Optional<Double> sumReduced = temperatures.stream()
+                .reduce( Double::sum);
+
         System.out.println(sumReduced);
 
 

@@ -57,7 +57,8 @@ Comparator<T>
 		return 0: o1 is equal to o2
 
 	compareTo
-		the core functionality of comparing objects was the same, so instead of writing the same code every time the compareTo method was created to help us call that functionality
+		the core functionality of comparing objects was the same,
+		 so instead of writing the same code every time the compareTo method was created to help us call that functionality
 
 	(Comparator.reverseOrder()); // sort the opposite of natural order (ascending)
 

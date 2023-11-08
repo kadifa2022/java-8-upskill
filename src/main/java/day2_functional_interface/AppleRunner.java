@@ -26,7 +26,7 @@ public class AppleRunner {
 
     }
 
-    // method for filtering apples by weight, color etc..(actions)
+    // method for filtering apples by weight, color, weight etc..( different actions)
     public static List<Apple> filter(List<Apple> apples, ApplePredicate applePredicate){
         List<Apple> filteredApples = new ArrayList<>();
         for(Apple each: apples){

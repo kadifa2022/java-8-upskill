@@ -21,14 +21,15 @@ Generics
 
 	added in java 5
 
-	a topic that we should understand. We will see it being used in ready code libraries. We will not need to define the generic
+	a topic that we should understand. We will see it being used in ready code libraries.
+	We will not need to define the generic
 
 	<>		diamond/angle brackets
 
 	problem: before generics there was no type protection
 	solution: generics allow the class to define which object type is allowed
 
-		Ex: List things = new ArrayList();
+		Ex: List things = new ArrayList();// we can store any object w/o generic
 				vs
 			List<String> things = new ArrayList();
 

@@ -5,7 +5,7 @@ public class OddPredicate<T> implements NumberPredicate<T>{
 
     @Override
     public boolean test(T t) {
-        return (Integer)t % 2 ==1; // CAST
+        return (Integer)t % 2 ==1; // CAST because we can not  do arithmetic operator with object
     }
 }
 /*

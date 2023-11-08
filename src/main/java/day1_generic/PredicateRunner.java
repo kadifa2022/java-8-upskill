@@ -19,7 +19,7 @@ public class PredicateRunner {
 
 
     }
-
+// before java 8 we need to do this manually
     public static  void mathFunc(List<Integer> list,
                  NumberPredicate<Integer>numberPredicate){
         for (int each:list) {

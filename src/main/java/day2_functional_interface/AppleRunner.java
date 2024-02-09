@@ -16,12 +16,14 @@ public class AppleRunner {
                 new Apple("Green", 58),
                 new Apple("Red", 65)
         ));
+
+                                    //behavior parameterization
         List<Apple> greenApples = filter(data, new AppleGreenColorPredicate());// first solution
         System.out.println(greenApples);
 
         // second solutions -> with lambda we don't need extra steps
         List<Apple> smallApples = filter(data, apple ->apple.getWeight() < 70);
-                //(parameter)-> {statement} lambda
+                                           //(parameter)-> {statement} lambda
         System.out.println(smallApples);
 
     }

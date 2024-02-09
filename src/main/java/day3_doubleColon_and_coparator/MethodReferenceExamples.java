@@ -11,13 +11,8 @@ public class MethodReferenceExamples {
     public static void main(String[] args) {
 
 
-//        Consumer<Integer> timesTwo= new Consumer<Integer>() { // anonymous class is  creating object from interface
-//            @Override
-//            public void accept(Integer integer) {
-//
-//            }
-//        }
-        System.out.println("=====Consumer acept()=========");
+
+        System.out.println("=====Consumer----- accept()=========");
 
         Consumer<Integer> print = n-> System.out.println(n);// warning but looking for method reference
         print.accept(10);
@@ -26,24 +21,24 @@ public class MethodReferenceExamples {
         print2.accept(5);
 
 
-        System.out.println("=====Function apply()====================");
+        System.out.println("=====Function ----------apply()====================");
 
         Function<String, String> toLower =s->s.toLowerCase();
         System.out.println(toLower.apply("Java"));
 
         Function<String, String> toLower2 = String::toLowerCase;
-        System.out.println(toLower2.apply("Java"));// same as line 15 lambda
+        System.out.println(toLower2.apply("Java"));// same as line 26 lambda
 
 
-        System.out.println("====Supplier  random()====================");// no parameter just returning Type
+        System.out.println("====Supplier  ----------random() num and get()====================");// no parameter just returning Type
 
         Supplier<Double> randomNum = ()-> Math.random();
         System.out.println(randomNum.get());
 
-        Supplier<Double> randomNum2 = ()-> Math.random();
+        Supplier<Double> randomNum2 = Math::random; // same as line 35 lambda
         System.out.println(randomNum2.get());
 
-        System.out.println("========BiFunction  apply()================");
+        System.out.println("========BiFunction  ---------apply()================");
 
 
         BiFunction<String, Integer, String> sub = (str, i)->str.substring(i);

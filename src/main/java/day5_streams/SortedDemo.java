@@ -25,6 +25,8 @@ public class SortedDemo {
         System.out.println("Now in single line");
 
         Stream<Integer> newFilteredSortedList= arrList.stream().filter(i->i >= 20).sorted();
+        //forEach method takes lambda expression as a argument and
+        // apply that lambda to each element present in that stream
         newFilteredSortedList.forEach(x-> System.out.println(x));
     }
 }

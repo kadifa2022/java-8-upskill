@@ -3,6 +3,21 @@ Java 8 Upskill
 10/18/23--
 
 Day 5: Stream
+Difference between stream(java 1.8) and collection?
+Collection => To represent group of collection as single entity than we should use collection concept.
+Stream=> If we want to preform operation on bulk objects in collection then we should go for stream.
+
+Steps to create and process stream?
+-We can get stream object by:
+    Stream s = collectionObject.stream();
+    Once you have stream object we can process the object of collection.
+    Processing of stream consists of 2 steps/stages
+        Configuration of stream
+        Processing that configuration
+        -Configuration can be dne by => Map(), Filter()
+How to filter the stream objects:
+Stream s = collectionObject.stream().filter(i->i%2 ==0);// even numbers
+How to map the stream objects:
 
 ------------------------------------------------------------------------
 

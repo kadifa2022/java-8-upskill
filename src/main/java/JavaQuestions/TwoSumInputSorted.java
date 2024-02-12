@@ -3,9 +3,16 @@ package JavaQuestions;
 public class TwoSumInputSorted {
     public static void main(String[] args) {
     int [] numbers = {2,7,11,15};
-        int target = 13;
+        int target = 17;
+        int [] answer = new int [2];
+        answer = twoSum(numbers,target);
+        if(answer !=null)
+            for (int i = 0; i < 2; i++) {
+                System.out.println(answer[i] + "");
 
-       // System.out.println(twoSum(numbers, target));
+            }
+
+
 
 
     }

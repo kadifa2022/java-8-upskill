@@ -22,7 +22,7 @@ public class FindMedianOfTwoSortedArrays {
 
 
 
-    public static int [] merge(int [] nums1, int [] nums2){
+   private static int [] merge(int [] nums1, int [] nums2){
 
         int [] mergedArray = new int[nums1.length + nums2.length];
         int i = 0, j= 0, k = 0;

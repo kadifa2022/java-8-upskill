@@ -10,8 +10,7 @@ public class ReverseString {
       str.length() is provided by String class
       char[] chArray = str.toCharArray();
 
-
-  */
+ */
 
     // write a program to reverse a String
     // Input : hello

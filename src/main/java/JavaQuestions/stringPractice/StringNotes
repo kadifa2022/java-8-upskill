@@ -1,0 +1,9 @@
+
+
+    4 ways to reverse String
+    - using toCharArray() method
+    - using charAt(int index) method
+    - using java.lang.StringBuffer class provided reverse() method
+    - using java.lang.StringBuilder class provided reverse() method
+      int length = str.length() is provided by String class
+      char[] chArr = str.toCharArray(); (will store the data based on indexes and index will start from  0)

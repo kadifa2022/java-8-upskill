@@ -13,7 +13,7 @@ public class CountNumbersInArray {
                 System.out.println("=>" + num + "<=");
                 break;
             }
-            System.out.println(num +", ");
+            System.out.print(num +", ");
 
         }
     }

@@ -35,9 +35,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 longestSubstringLength = map.size();
               longestSubstring= map.keySet().toString();
             }
-
         }
-
         System.out.println("The longest substring" +longestSubstring);
         System.out.println("The longest substring length " + longestSubstringLength);
 

@@ -20,3 +20,4 @@
       // get(key) get the existing value from the key increment++
       // if is not represented, than store k with the value as 1
       for(char ch:chars) check each letter
+

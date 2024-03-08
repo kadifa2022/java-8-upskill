@@ -8,7 +8,16 @@ public class SegregateZerosAndOnes {
         segregateZerosAndOnce(nums);
         System.out.println("Segregated Array: " + Arrays.toString(nums));
 
+
+        int [] segregatedArray = Arrays.stream(nums)
+                .boxed() //convert int to integer
+                .sorted((a,b) -> a-b) //sorted array
+                .mapToInt(Integer::intValue)  //Convert integer back to int
+                .toArray(); // convert stream to array
+        System.out.println("Segregated Array" + Arrays.toString(segregatedArray));
+
     }
+
 
     public static void segregateZerosAndOnce(int [] nums){
         int left =0, right = nums.length-1;
@@ -32,5 +41,7 @@ public class SegregateZerosAndOnes {
             }
         }
     }
+
+
 
 }

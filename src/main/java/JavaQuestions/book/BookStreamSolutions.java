@@ -2,6 +2,7 @@ package JavaQuestions.book;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class BookStreamSolutions {
     public static void main(String[] args) {
@@ -31,7 +32,17 @@ public class BookStreamSolutions {
 
 
         //3. Find the book with the highest price
+        Book mostExpensiveBook = books.stream()
+                .max((book1,book2)-> Double.compare(book1.getPrice(), book2.getPrice()))
+                .orElse(null);
+        System.out.println("Most expensive book " + mostExpensiveBook);
+
         //4. Create a new list books price less than $40
+        List<Book> affordableBook= books.stream()
+                .filter(book -> book.getPrice() < 40)
+                .collect(Collectors.toList());
+        System.out.println("Most affordable Book (price less tha $40) " );
+        affordableBook.forEach(System.out::println);
 
     }
 }

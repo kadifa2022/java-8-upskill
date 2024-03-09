@@ -1,6 +1,9 @@
 package JavaQuestions;
 
 
+import JavaQuestions.book.TwoSumProblem;
+
+import java.util.Arrays;
 import java.util.HashMap;
 
 
@@ -10,9 +13,12 @@ public class TwoSum {
 
         int[] nums = new int[]{2,7,11,15};
         int target = 9;
+        // int [] result = twoSum(nums, target);
+     //  System.out.println(result[0]+ ", " +result[1]);
+        TwoSumProblem solver = new TwoSumProblem();
+        int result []= solver.twoSum(nums, target);
+        System.out.println(Arrays.toString(result));
 
-      int [] result = twoSum(nums, target);
-        System.out.println(result[0]+ ", " +result[1]);
 
 
     }

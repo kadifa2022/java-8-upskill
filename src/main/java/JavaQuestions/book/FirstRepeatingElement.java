@@ -23,7 +23,7 @@ public class FirstRepeatingElement {
             if (min != -1) {
                 System.out.println("Repeating element is " + arr[min]);
             }else{
-                System.out.println("No Element is repeated in array");
+                System.out.println("Element is not repeated in array");
             }
         }
     }

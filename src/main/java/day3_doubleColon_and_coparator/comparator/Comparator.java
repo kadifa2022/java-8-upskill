@@ -1,4 +1,4 @@
-package day3_doubleColon_and_coparator;
+package day3_doubleColon_and_coparator.comparator;
 
 //import java.util.ArrayList;
 //import java.util.Arrays;

@@ -1,5 +1,7 @@
 package day3_doubleColon_and_coparator;
 
+import day3_doubleColon_and_coparator.comparator.Comparator;
+
 public class Movie implements Comparable<Movie>{
     private String name;
     private int year;
@@ -48,6 +50,13 @@ public class Movie implements Comparable<Movie>{
     public int compareTo(Movie o) {// is implemented method from comparable interface
         return Integer.compare(this.year, o.year);
     }
+
+    // this is anonymous class we have semicolon  on the end of the code
+    public static Comparator nameComparator = new Comparator(){
+        public int compare(Movie m1, Movie m2){
+            return m1.getName().compareTo(m2.getName());
+        }
+    }; // semicolon
 
 
 }

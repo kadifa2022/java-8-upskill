@@ -13,8 +13,11 @@ public class MovieRunner {
                 new Movie("Avatar", 2009, 7.9),
                 new Movie("Iron Man", 2008, 7.9),
                 new Movie("The Dark Knight", 2008, 9.0),
-                new Movie("Rocky",1976, 8.1)
-        ));
+                new Movie("Rocky",1976, 8.1)));
+
+
+
+
 
         System.out.println("===========Original Data==================");
 
